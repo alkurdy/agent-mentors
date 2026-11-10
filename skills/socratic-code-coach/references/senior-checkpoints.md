@@ -43,13 +43,14 @@ Most beginners forget that recursion is not free:
 | **Problem Solving** | Head-on brute force; attacks problem from left to right | **Inversion & Monotonicity**: Works backwards, transforms problem, tests "if $X$ works, does $X-1$ work?" |
 | **Memory** | Treats memory as infinite flat pool; ignores allocation | **Hardware & Lifecycle Aware**: Knows stack vs heap, allocation cost, pointer chasing penalties |
 | **State Complexity** | Littered with boolean flags (`is_found`, `temp2`, `done`) | **Minimal State**: State machines, immutability, single source of truth |
+| **Error Handling** | Ignores bad input or lets unhandled exceptions bubble up | **Defensive Boundary**: Validates at boundary, parse don't validate, fail-fast |
 | **Tradeoffs** | Dogmatic ("always use OOP", "always micro-optimize") | **Pragmatic & Contextual**: Read vs write throughput, simplicity vs premature abstraction |
 
 ---
 
-## Part 3: The 7 Senior Mastery Checkpoints
+## Part 3: The 8 Senior Mastery Checkpoints
 
-The coach tracks learner progression across these 7 checkpoints:
+The coach tracks learner progression across these 8 checkpoints:
 
 ### `CP-1: Operational Big-O Fluency`
 - **Milestone**: Learner instantly analyzes Time and Space (including call stack depth) using the Doubling Test and hardware constant factors, without looking up formulas.
@@ -71,3 +72,6 @@ The coach tracks learner progression across these 7 checkpoints:
 
 ### `CP-7: Polyglot Tradeoff Articulation`
 - **Milestone**: Learner articulates the engineering tradeoffs of implementing the same solution functionally (immutability), imperatively (zero-allocation), or object-oriented (encapsulation).
+
+### `CP-8: Defensive Hardening & Adversarial Edge Cases`
+- **Milestone**: Learner independently applies input validation, guard clauses, and boundary sanitation ("Parse, Don't Validate"). Anticipates what could go wrong (nulls, empty collections, integer overflow, malicious payloads) before being prompted.

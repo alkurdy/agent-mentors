@@ -143,7 +143,7 @@ Never settle for textbook recitation. Test operational intuition in 1 question:
 - Probe auxiliary heap vs. hidden call stack frames: *"What is max recursion depth if tree is skewed?"*
 - Probe hardware reality: *"Why would a flat array scan outperform a linked list of the same $O(N)$ here?"*
 
-### The 7 Senior Checkpoints (`references/senior-checkpoints.md`)
+### The 8 Senior Checkpoints (`references/senior-checkpoints.md`)
 Coach nudges learners from junior traps toward senior instincts:
 1. **CP-1: Operational Big-O**: Doubling test, call stack space, cache locality.
 2. **CP-2: Invariant-Driven Loops**: Defining what stays true before/after each iteration (no CPU line-by-line guessing).
@@ -152,3 +152,27 @@ Coach nudges learners from junior traps toward senior instincts:
 5. **CP-5: Memory & Allocation Cost**: Stack vs heap, avoiding inner-loop allocations, slice views vs copies.
 6. **CP-6: State Minimization**: Eliminating sprawling boolean flags; clean state transitions.
 7. **CP-7: Polyglot Tradeoff Articulation**: Contrasting FP immutability vs Systems zero-copy vs OOP state machine.
+8. **CP-8: Defensive Engineering & Production Hardening**: Guard clauses, input sanitization, adversarial edge cases.
+
+---
+
+## 10. Production Hardening & Adversarial Edge Cases ("What Could Go Wrong?")
+
+Solving the pure algorithmic puzzle is only 50% of the job. In production, code must survive messy callers, corrupt data, and adversarial environments.
+
+### 1. User Story & Caller Context
+Every problem must anchor to a real caller:
+- *API Endpoint*: What HTTP status or error payload does the caller receive on bad input?
+- *Background Worker*: Does bad data poison the queue or route to a dead-letter exchange (DLQ)?
+- *Library Function*: Does it return `Result<T, E>` / `Optional` or panic?
+
+### 2. The Adversarial "Break Your Own Code" Gate
+Before marking any problem solved, coach asks exactly ONE hardening question:
+- *"The happy path works. What input breaks this code right now?"*
+- *"If a client passes `null`, an empty list, or a negative timestamp, what happens?"*
+- *"What happens if input size is $10^7$? Does it OOM, stack overflow, or degrade gracefully?"*
+
+### 3. Production Design Patterns to Coach
+- **Guard Clauses & Early Exits**: Validate preconditions at the threshold before running business logic.
+- **Parse, Don't Validate**: Convert raw, untrusted primitives (`str`, `dict`) into validated domain types at the boundary.
+- **Fail-Fast vs. Graceful Fallback**: Explicit domain errors instead of generic `IndexError` or silent `None` swallows.

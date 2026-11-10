@@ -19,7 +19,8 @@
     "CP-4_monotonicity_inversion": false,
     "CP-5_memory_allocation_cost": false,
     "CP-6_state_minimization": false,
-    "CP-7_polyglot_tradeoffs": false
+    "CP-7_polyglot_tradeoffs": false,
+    "CP-8_defensive_hardening": false
   },
-  "notes": "Initialized starter profile with 7 senior checkpoints."
+  "notes": "Initialized starter profile with 8 senior checkpoints."
 }
