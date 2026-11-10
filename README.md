@@ -12,7 +12,7 @@ Default AI coding assistants suffer from an anti-learning flaw: **they dump full
 
 | Skill | Focus Area | Description |
 | :--- | :--- | :--- |
-| **[`socratic-code-coach`](skills/socratic-code-coach/SKILL.md)** | Programming & Algorithms | Refuses solution dumping. Teaches runtime memory models, problem decomposition, and Senior Dev code reviews. |
+| **[`socratic-code-coach`](skills/socratic-code-coach/SKILL.md)** | Programming & Algorithms | Adaptive mastery engine with 5-tier ladder, PCDIT & Pólya frameworks, anti-freeze protocol, and strict anti-spoonfeed guardrails. |
 | **[`systems-architect-mentor`](skills/systems-architect-mentor/SKILL.md)** | Distributed Systems & Scalability | Explores tradeoffs, back-of-the-envelope math, physical hardware limits, and failure injection testing. |
 | **[`product-design-mentor`](skills/product-design-mentor/SKILL.md)** | UX & Product Design | Teaches user mental models, cognitive load reduction, information architecture, and design system rigor. |
 
