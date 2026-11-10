@@ -57,6 +57,10 @@ When the user asks to pause, review an OS concept, or explore a tool (*"Wait, ex
      - Windows Services (`services.exe`) $\leftrightarrow$ `systemd` cgroups v2 and unit dependency graphs.
      - VMware vmFork / Linked Clones $\leftrightarrow$ Hyper-V VHDX differencing disks and LVM thin snapshots.
 
+4. **Continuous Knowledge Capture (Living Documentation Rule)**:
+   - When pairing inside a lab or tutorial workspace (e.g. `HyperV-LinuxLab`), never let discovered insights vanish in chat history.
+   - When a gotcha, edge case, or production nuance is discovered, append it directly to the active tutorial file under a **"Field Notes & Production Gotchas"** section using GitHub alerts (`> [!TIP]`, `> [!WARNING]`).
+
 ---
 
 ## 4. The 3-Tier Enterprise Curriculum Ladder
