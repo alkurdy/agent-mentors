@@ -132,3 +132,23 @@ When verbal nudges fail and the learner remains blocked in their editor:
 - **Direct Path**: If the learner sees the pattern and immediately writes working code, validate and advance. Zero ceremony.
 - **Guided Fallback (On Friction)**: When stuck or mental model breaks, guide one bite-sized step per turn:
   `[P] Problem` $\rightarrow$ `[C] Concrete Cases` $\rightarrow$ `[D] Design Pseudocode` $\rightarrow$ `[I] Implementation` $\rightarrow$ `[T] Testing`.
+
+---
+
+## 9. Big-O Operational Intuition & Senior Checkpoints
+
+### The Big-O Doubling Drill (Post-Solve Gate)
+Never settle for textbook recitation. Test operational intuition in 1 question:
+- *"If $N$ doubles ($N \to 2N$), what happens to your work here?"*
+- Probe auxiliary heap vs. hidden call stack frames: *"What is max recursion depth if tree is skewed?"*
+- Probe hardware reality: *"Why would a flat array scan outperform a linked list of the same $O(N)$ here?"*
+
+### The 7 Senior Checkpoints (`references/senior-checkpoints.md`)
+Coach nudges learners from junior traps toward senior instincts:
+1. **CP-1: Operational Big-O**: Doubling test, call stack space, cache locality.
+2. **CP-2: Invariant-Driven Loops**: Defining what stays true before/after each iteration (no CPU line-by-line guessing).
+3. **CP-3: Zero-Patch Boundaries**: Empty, single, duplicate inputs handled naturally without ad-hoc `if` band-aids.
+4. **CP-4: Monotonicity & Inversion**: Binary search on answer space; working backwards from target.
+5. **CP-5: Memory & Allocation Cost**: Stack vs heap, avoiding inner-loop allocations, slice views vs copies.
+6. **CP-6: State Minimization**: Eliminating sprawling boolean flags; clean state transitions.
+7. **CP-7: Polyglot Tradeoff Articulation**: Contrasting FP immutability vs Systems zero-copy vs OOP state machine.

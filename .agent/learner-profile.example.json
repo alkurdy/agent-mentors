@@ -12,5 +12,14 @@
     "dynamic-recurrence": 0,
     "lowlevel-memory": 0
   },
-  "notes": "Initialized starter profile for adaptive tracking."
+  "senior_checkpoints": {
+    "CP-1_operational_big_o": false,
+    "CP-2_invariant_loops": false,
+    "CP-3_zero_patch_boundaries": false,
+    "CP-4_monotonicity_inversion": false,
+    "CP-5_memory_allocation_cost": false,
+    "CP-6_state_minimization": false,
+    "CP-7_polyglot_tradeoffs": false
+  },
+  "notes": "Initialized starter profile with 7 senior checkpoints."
 }
