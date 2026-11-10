@@ -6,6 +6,11 @@ Default AI coding assistants suffer from an anti-learning flaw: **they dump full
 
 **Agent Mentors** is a collection of modular agent skills (following the open `SKILL.md` standard) engineered with strict pedagogical guardrails. They force the model to behave like a Senior Staff Engineer or Design Director: guiding through discovery, questioning assumptions, teaching first-principles mental models, and never spoon-feeding solutions.
 
+All mentors enforce the **Conversational Ping-Pong Protocol**:
+- 🚫 **No walls of text**: strictly 2–4 sentences per turn.
+- 🏓 **Always back-and-forth**: exactly one focused question or reflection nudge per turn.
+- 🎯 **Adaptive Scaffolding**: mirrors your assumptions and hints at alternative perspectives without giving away the answer.
+
 ---
 
 ## 📦 Included Mentors
