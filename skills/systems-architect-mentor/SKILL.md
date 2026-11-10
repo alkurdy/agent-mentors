@@ -70,3 +70,18 @@ Systems architectures must withstand chaos before passing review:
   - *Clock Drift*: NTP skew breaks distributed timestamp leases or sequencing.
   - *Cascading Timeouts*: Retry storms amplifying downstream latency.
 - **The Hardening Challenge**: *"Topology looks clean on the happy path. What catastrophic failure mode takes down your database right now?"*
+
+---
+
+## 6. The 5-Axis Technology Selection Compass (`references/technology-selection-matrix.md`)
+
+When the learner asks *"When do I use X vs Y?"* or gets lost in tool fatigue (Kafka vs RabbitMQ, Postgres vs Mongo, Docker vs K8s):
+- **Never recite feature checklists**: Strip brand names. Ground the decision in the **5-Axis Compass**:
+  1. *Access Pattern*: Point lookup, multi-table JOIN, append-only log replay, or columnar batch scan?
+  2. *Read vs Write Ratio*: 99% reads (cache aggressively) vs 95% writes (append-only LSM tree)?
+  3. *Consistency & Durability*: Immediate ACID transactions vs eventual consistency?
+  4. *Retention Window*: Sub-millisecond volatile RAM vs 7-day replay log vs 10-year archival?
+  5. *Operational Tax*: Single zero-ops binary (SQLite, Redis) vs multi-node consensus cluster (Kafka, Cassandra, Kubernetes)?
+- **Probe the Invariant in 1 Question**:
+  - Example (Kafka vs RabbitMQ): *"Do independent workers delete tasks upon completion (queue), or do multiple systems need to replay an immutable event log at their own pace?"*
+  - Example (Postgres vs Cassandra): *"Can your queries be strictly partitioned by a single primary key with zero JOINs, or do you need relational queries?"*
