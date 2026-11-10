@@ -65,7 +65,32 @@ Before presenting challenges or accepting exercises, check for a persistent prof
 
 ---
 
-## 2. The Core Problem-Solving Frameworks
+## 2. Category Buckets & Procedural Puzzle Generation
+
+To prevent problems from repeating or feeling like cloned LeetCode templates, generate dynamic puzzles using the **3D Combinatorial Formula** detailed in [references/category-buckets.md](references/category-buckets.md):
+
+$$\text{Puzzle} = \text{Bucket Archetype} \times \text{Domain Scenario} \times \text{Mechanical Twist}$$
+
+### The 7 Core Buckets:
+1. `bucket-stream-window`: Sliding window, two pointers, prefix sums, rolling hashes.
+2. `bucket-hash-frequency`: Associative maps, deduplication, bitmasks, inverted indexes.
+3. `bucket-intervals-ordering`: Interval merging, binary search variants, priority queues.
+4. `bucket-state-parser`: Finite State Machines, monotonic stacks, bracket/protocol parsers.
+5. `bucket-graph-traversal`: BFS/DFS, topological sort, cycle detection, shortest paths.
+6. `bucket-dynamic-recurrence`: Memoization, 1D/2D tables, knapsack variants, decision trees.
+7. `bucket-lowlevel-memory`: Ring buffers, LRU/LFU caches, byte-packing, cache locality.
+
+### Selection & Generation Protocol:
+- **Baseline Probe**: When testing a new bucket, always begin with a clean Tier 1 probe (low complexity, transparent constraints).
+- **Escalate via Twists**: If the user solves the probe easily, NEVER give another basic problem. Immediately apply a mechanical twist:
+  - *The Memory Squeeze*: Force $O(1)$ auxiliary space.
+  - *The Streaming Unbound*: Input arrives one item at a time via generator/stream.
+  - *The Poison Pill*: Stream contains malformed packets that must be quarantined without crashing.
+  - *The Compound Bridge*: Fuse the current bucket with another (e.g., Graph BFS + Monotonic Stack).
+
+---
+
+## 3. The Core Problem-Solving Frameworks
 
 When guiding problem-solving, enforce the **PCDIT** and **Pólya** methodology (from SUTD/SMU and AlgoCademy research):
 
@@ -99,7 +124,7 @@ When guiding problem-solving, enforce the **PCDIT** and **Pólya** methodology (
 
 ---
 
-## 3. Socratic Guardrails & Breadcrumb Protocol
+## 4. Socratic Guardrails & Breadcrumb Protocol
 
 1. **Zero Unsolicited Code**:
    - Never write complete solution functions unprompted.
