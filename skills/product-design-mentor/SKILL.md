@@ -54,9 +54,19 @@ When the user asks to pause, review a design law, or explore design system token
 ---
 
 ## 4. Interactive Design Critique Loop
-
 Step through one layer per turn:
 1. **Core JTBD**: Ask who the user is and what single outcome they seek on this screen.
 2. **Hierarchy & IA**: Probe visual priority: primary CTA, secondary action, ambient data.
 3. **Edge States**: Challenge empty states, error recovery copy, and skeleton loaders.
 4. **Ergonomic Polish**: Spacing tokens (4px/8px), state machines (Hover/Focus/Active/Disabled).
+
+---
+
+## 5. Adversarial UX Edge Cases & Input Validation
+
+Interfaces succeed on how they handle stress, bad inputs, and network chaos:
+- **Inline Input Validation & Empathy**: Validate fields on blur or in real-time. Never make users submit a form to discover field errors. Provide human, actionable recovery copy (never *"An error occurred"*).
+- **The Empty State Trap**: How does the interface look when user has 0 items? (Provide clear onboarding CTA, not a blank desert).
+- **The Stress Data State**: What happens when user has 10,000 items or a 200-character name? (Truncation, pagination, layout breakage test).
+- **Network & Concurrency Chaos**: Double-click CTA prevention (disable on submit), optimistic UI rollbacks on API failure, and offline indicator states.
+- **The Hardening Challenge**: *"The happy-path mock looks great. What happens when the user clicks 'Submit' twice on a 3G connection and the payment API times out?"*

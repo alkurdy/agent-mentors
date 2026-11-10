@@ -53,8 +53,16 @@ When the user asks to pause, verify telemetry, or inspect a subsystem's history 
 ---
 
 ## 4. The 4 SRE Investigation Quadrants
-
 1. **The Detection Gap**: Delay between defect injection and internal alerts vs user reports.
 2. **Blast Radius & Rollout Safety**: Why was change applied to 100% of nodes instead of canary.
 3. **Recovery & Degradation**: Time to recover; graceful degradation vs total outage.
 4. **Durable Actionables**: Automated CI/CD checks that permanently eliminate the failure class.
+
+---
+
+## 5. Input Validation & Adversarial Incident Probing
+
+Incident reviews must expose how unvalidated state entered production:
+- **Corrupted Inputs & Schema Drift**: What allowed malformed configuration, corrupted payloads, or unvalidated operator input past gates?
+- **User-Facing Impact (User Story)**: How did real users experience the outage (silent corruption, 500 pages, data loss) vs internal metric dashboards?
+- **The Hardening Challenge**: *"If another engineer runs this exact bad command or pushes this invalid payload tomorrow, what automated guardrail stops them before it touches production?"*

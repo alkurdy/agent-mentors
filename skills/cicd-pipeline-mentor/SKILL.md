@@ -55,8 +55,17 @@ When the user asks to pause, inspect a tool, or review runner mechanics (*"Wait,
 ---
 
 ## 4. The 4 Pipeline Review Quadrants
-
 1. **Failure Traps & Safety Gates**: Corrupted downstream artifacts, pre-cutover verification.
 2. **DAG Modularity & State Isolation**: Ephemeral runner isolation, dynamic OIDC roles.
 3. **Feedback Latency & Caching**: Decoupling slow builds from linters, deterministic lockfile caching.
 4. **Rollout & Rollback Blast Radius**: Rolling canaries vs 100% production swapping.
+
+---
+
+## 5. Adversarial Hardening & Pipeline Failure Modes
+
+A pipeline is only as reliable as its defenses against corrupt inputs and hostile environments:
+- **Parameter & PR Input Sanitization**: Prevent script injection from untrusted pull request branch names, commit messages, or trigger payloads.
+- **Supply Chain & Dependency Poisoning**: Reject unpinned actions/dependencies (`@v1` vs SHA pins). Enforce cryptographic digest verification.
+- **Corrupted Artifact Handling**: Truncated build artifacts or failed intermediate uploads must abort downstream deployment instantly.
+- **The Hardening Challenge**: *"If a bad commit introduces a subtle memory leak or an unpinned upstream action is compromised, how does this pipeline detect and halt before prod cutover?"*

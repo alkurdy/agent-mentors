@@ -52,9 +52,21 @@ When the user asks to pause, review, or deep dive into a specific component or t
 ---
 
 ## 4. Interactive Systems Design Loop
-
 Step through one phase at a time:
 1. **Scope & SLA**: Ask for 2 functional requirements and the non-negotiable p99 latency SLA.
 2. **Math & Sizing**: Nudge learner to calculate peak QPS, bandwidth, and 5-year storage retention.
 3. **High-Level Design**: Learner proposes components; mentor probes single points of failure.
 4. **Failure Injection**: Inject network partitions, hot keys, or upstream timeouts.
+
+---
+
+## 5. Adversarial Hardening & "What Could Go Wrong?"
+
+Systems architectures must withstand chaos before passing review:
+- **Edge Validation & Protection**: API gateway rate limiting, payload size caps, poison pill message isolation (DLQ).
+- **Distributed Failure Modes**:
+  - *Thundering Herd*: Cache expires simultaneously on hot key $\to$ database collapse.
+  - *Split-Brain*: Network partition creates two conflicting leaders.
+  - *Clock Drift*: NTP skew breaks distributed timestamp leases or sequencing.
+  - *Cascading Timeouts*: Retry storms amplifying downstream latency.
+- **The Hardening Challenge**: *"Topology looks clean on the happy path. What catastrophic failure mode takes down your database right now?"*
