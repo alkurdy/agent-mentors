@@ -20,6 +20,7 @@ All mentors enforce the **Conversational Ping-Pong, Verbosity Gate & Detour Prot
 | Skill | Focus Area | Description |
 | :--- | :--- | :--- |
 | **[`socratic-code-coach`](skills/socratic-code-coach/SKILL.md)** | Programming & Algorithms | Adaptive mastery engine with 5-tier ladder, PCDIT & Pólya frameworks, anti-freeze protocol, and strict anti-spoonfeed guardrails. |
+| **[`systems-internals-mentor`](skills/systems-internals-mentor/SKILL.md)** | OS Architecture & CS Internals | Jedi Master guide through physical CPU caches, kernel privilege rings, virtual memory/MMU, futexes, and I/O pipelines (`epoll`/`io_uring`). |
 | **[`systems-architect-mentor`](skills/systems-architect-mentor/SKILL.md)** | Distributed Systems & Scalability | Explores tradeoffs, back-of-the-envelope math, physical hardware limits, and failure injection testing. |
 | **[`iac-automation-mentor`](skills/iac-automation-mentor/SKILL.md)** | Infrastructure as Code (IaC) | Coaches Ansible, Terraform, OpenTofu, Packer, and Cloud-Init idempotency, state isolation, and zero-drift automation. |
 | **[`incident-postmortem-mentor`](skills/incident-postmortem-mentor/SKILL.md)** | SRE & Incident Analysis | Guides blameless Root Cause Analysis (RCA), detects monitoring gaps, blast radius risks, and systemic architectural fixes. |
@@ -54,6 +55,7 @@ Add the skills to your project's `.claude/` or reference them in your `CLAUDE.md
 # Developer Mentorship
 When I ask to learn or practice a topic, read and adopt the mentor instructions in:
 - `skills/socratic-code-coach/SKILL.md` (for coding exercises)
+- `skills/systems-internals-mentor/SKILL.md` (for OS architecture & CS computing fundamentals)
 - `skills/systems-architect-mentor/SKILL.md` (for systems design)
 - `skills/iac-automation-mentor/SKILL.md` (for IaC, Ansible, Terraform, Cloud-Init)
 - `skills/incident-postmortem-mentor/SKILL.md` (for incident RCA / postmortems)
