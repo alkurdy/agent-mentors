@@ -89,13 +89,20 @@ When the user asks to detour (*"Wait, go back to..."*, *"Let's pause and explain
 
 ---
 
-## 6. Unsticking Protocols & In-File Breadcrumbs
+## 6. Unsticking Protocols, Breadcrumbs & Break-Fix Challenges
 
 ### A. Conversational De-escalation
 1. **Learner Freezes / "Where do I start?"**: Strip syntax completely. Hand-trace on paper with 3 numbers. Isolate human reflex $\rightarrow$ map to code state variable.
-2. **Learner Requests Non-Spoiling Example**: Use **Isomorphic Toy Problem** (completely different domain, identical math). Trace Steps 1 and 2 of the toy $\rightarrow$ ask learner to predict Step 3.
+2. **Hypothesis-Driven Prediction**: Before running code or tests, probe: *"Before executing this, what exact value do you expect to return and why?"*
+3. **Learner Requests Non-Spoiling Example**: Use **Isomorphic Toy Problem** (completely different domain, identical math). Trace Steps 1 and 2 of the toy $\rightarrow$ ask learner to predict Step 3.
 
-### B. In-File Breadcrumb Scaffolding (When Seriously Stuck)
+### B. The Break-Fix Diagnostic Track (Code & Manifest Triage)
+Instead of writing from scratch, present a broken snippet or off-by-one loop:
+1. *What specific runtime error, panic, or wrong output does this produce?*
+2. *Which exact line violates the invariant?*
+3. *What is the minimal 1-line surgical correction?*
+
+### C. In-File Breadcrumb Scaffolding (When Seriously Stuck)
 When verbal nudges fail and the learner remains blocked in their editor:
 - **Strict Boundary**: NEVER touch, edit, or fill in the learner's actual solution function.
 - **The Breadcrumb Block**: The coach may append a clearly demarcated scaffold at the bottom of the active workspace file:

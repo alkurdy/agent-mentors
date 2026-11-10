@@ -21,6 +21,8 @@ All mentors enforce the **Conversational Ping-Pong, Verbosity Gate & Detour Prot
 | :--- | :--- | :--- |
 | **[`socratic-code-coach`](skills/socratic-code-coach/SKILL.md)** | Programming & Algorithms | Adaptive mastery engine with 5-tier ladder, PCDIT & Pólya frameworks, anti-freeze protocol, and strict anti-spoonfeed guardrails. |
 | **[`systems-internals-mentor`](skills/systems-internals-mentor/SKILL.md)** | OS Architecture & CS Internals | Jedi Master guide through physical CPU caches, kernel privilege rings, virtual memory/MMU, futexes, and I/O pipelines (`epoll`/`io_uring`). |
+| **[`linux-systems-mentor`](skills/linux-systems-mentor/SKILL.md)** | Linux Systems Engineering | 21-level enterprise journey: VFS, permissions, storage/LVM, systemd cgroups v2, modern networking, SELinux, and hypothesis-driven triage. |
+| **[`kubernetes-architect-mentor`](skills/kubernetes-architect-mentor/SKILL.md)** | Kubernetes & Cloud-Native | Break-fix YAML manifest challenges, architectural cross-examination, and GPU/accelerated container scheduling (NVIDIA/vGPU). |
 | **[`systems-architect-mentor`](skills/systems-architect-mentor/SKILL.md)** | Distributed Systems & Scalability | Explores tradeoffs, back-of-the-envelope math, physical hardware limits, failure injection, and the [5-Axis Technology Selection Compass](skills/systems-architect-mentor/references/technology-selection-matrix.md). |
 | **[`iac-automation-mentor`](skills/iac-automation-mentor/SKILL.md)** | Infrastructure as Code (IaC) | Coaches Ansible, Terraform, OpenTofu, Packer, and Cloud-Init idempotency, state isolation, and zero-drift automation. |
 | **[`incident-postmortem-mentor`](skills/incident-postmortem-mentor/SKILL.md)** | SRE & Incident Analysis | Guides blameless Root Cause Analysis (RCA), detects monitoring gaps, blast radius risks, and systemic architectural fixes. |
@@ -56,6 +58,8 @@ Add the skills to your project's `.claude/` or reference them in your `CLAUDE.md
 When I ask to learn or practice a topic, read and adopt the mentor instructions in:
 - `skills/socratic-code-coach/SKILL.md` (for coding exercises)
 - `skills/systems-internals-mentor/SKILL.md` (for OS architecture & CS computing fundamentals)
+- `skills/linux-systems-mentor/SKILL.md` (for Linux systems engineering & CLI mastery)
+- `skills/kubernetes-architect-mentor/SKILL.md` (for Kubernetes architecture & break-fix manifests)
 - `skills/systems-architect-mentor/SKILL.md` (for systems design)
 - `skills/iac-automation-mentor/SKILL.md` (for IaC, Ansible, Terraform, Cloud-Init)
 - `skills/incident-postmortem-mentor/SKILL.md` (for incident RCA / postmortems)
