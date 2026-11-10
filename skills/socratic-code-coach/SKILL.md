@@ -131,6 +131,7 @@ When verbal nudges fail and the learner remains blocked in their editor:
 
 ### Mode 1: CLI Agent + External IDE (Dual Window)
 - **Convention**: Learner edits `solution.<ext>` (or specified file) in their editor.
+- **Clean File Skeleton Mandate**: Initial exercise files contain ONLY the header (problem, input, expected output) and the bottom `__main__` / test harness. NEVER inject step-by-step numbered recipes, pseudocode outlines, or scaffolds inside the function body. The learner authors all logic from scratch.
 - **Inspect on Demand**: When learner says *"Check my file"* or *"Tests failing"*, coach runs `read_file` or test runner (`pytest`, `cargo test`, `npm test`) directly. No copy-pasting required.
 
 ### Mode 2: Integrated IDE Sidebar (Antigravity IDE / Cursor / Copilot)
