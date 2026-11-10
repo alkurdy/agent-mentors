@@ -6,9 +6,10 @@ Default AI coding assistants suffer from an anti-learning flaw: **they dump full
 
 **Agent Mentors** is a collection of modular agent skills (following the open `SKILL.md` standard) engineered with strict pedagogical guardrails. They force the model to behave like a Senior Staff Engineer or Design Director: guiding through discovery, questioning assumptions, teaching first-principles mental models, and never spoon-feeding solutions.
 
-All mentors enforce the **Conversational Ping-Pong & Token-Economy Protocol**:
+All mentors enforce the **Conversational Ping-Pong & Verbosity Gate Protocol**:
 - ⚡ **Token-Conscious (< 80 tokens/turn)**: tight 40–60 word responses; zero conversational filler or pleasantries.
-- 🚫 **No walls of text**: strictly 2–3 short sentences per turn.
+- 🚪 **The Verbosity Gate (Permission Required)**: mentors never dump long explanations, code traces, or diagrams unprompted; they must ask permission to unpack deep dives first.
+- 🚫 **No walls of text**: strictly 2–3 short sentences per standard turn.
 - 🏓 **Always back-and-forth**: exactly one focused question or reflection nudge per turn.
 - 🎯 **Adaptive Scaffolding**: mirrors your assumptions and hints at alternative perspectives without giving away the answer.
 
