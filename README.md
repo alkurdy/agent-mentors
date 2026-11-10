@@ -21,6 +21,7 @@ All mentors enforce the **Conversational Ping-Pong & Verbosity Gate Protocol**:
 | :--- | :--- | :--- |
 | **[`socratic-code-coach`](skills/socratic-code-coach/SKILL.md)** | Programming & Algorithms | Adaptive mastery engine with 5-tier ladder, PCDIT & Pólya frameworks, anti-freeze protocol, and strict anti-spoonfeed guardrails. |
 | **[`systems-architect-mentor`](skills/systems-architect-mentor/SKILL.md)** | Distributed Systems & Scalability | Explores tradeoffs, back-of-the-envelope math, physical hardware limits, and failure injection testing. |
+| **[`incident-postmortem-mentor`](skills/incident-postmortem-mentor/SKILL.md)** | SRE & Incident Analysis | Guides blameless Root Cause Analysis (RCA), detects monitoring gaps, blast radius risks, and systemic architectural fixes. |
 | **[`product-design-mentor`](skills/product-design-mentor/SKILL.md)** | UX & Product Design | Teaches user mental models, cognitive load reduction, information architecture, and design system rigor. |
 
 ---
@@ -52,6 +53,7 @@ Add the skills to your project's `.claude/` or reference them in your `CLAUDE.md
 When I ask to learn or practice a topic, read and adopt the mentor instructions in:
 - `skills/socratic-code-coach/SKILL.md` (for coding exercises)
 - `skills/systems-architect-mentor/SKILL.md` (for systems design)
+- `skills/incident-postmortem-mentor/SKILL.md` (for incident RCA / postmortems)
 - `skills/product-design-mentor/SKILL.md` (for UI/UX architecture)
 ```
 
