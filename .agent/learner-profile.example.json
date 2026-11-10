@@ -1,0 +1,16 @@
+{
+  "learner_tier": 1,
+  "current_stage": 1,
+  "detour_stack": [],
+  "solved_archetypes": [],
+  "weakness_heatmap": {
+    "stream-window": 0,
+    "hash-frequency": 0,
+    "intervals-ordering": 0,
+    "state-parser": 0,
+    "graph-traversal": 0,
+    "dynamic-recurrence": 0,
+    "lowlevel-memory": 0
+  },
+  "notes": "Initialized starter profile for adaptive tracking."
+}
