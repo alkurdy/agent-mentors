@@ -57,26 +57,30 @@ When the user asks to detour (*"Wait, go back to..."*, *"Let's pause and explain
 
 ---
 
-## 4. Weakness Pressure Engine & Profile Tracking
+## 4. Curriculum Progression: Default Sequence vs. User Override
 
-### Profile Location: `.agent/learner-profile.json`
+### A. The Default Progression Sequence
+Unless the learner explicitly requests a specific topic or difficulty level, the coach automatically drives the canonical 7-bucket progression from `.agent/learner-profile.json`:
+1. `Bucket 1: stream-window` (Sliding window, two-pointer invariants, contiguous subarrays)
+2. `Bucket 2: hash-frequency` (Frequency maps, lookup sets, complements)
+3. `Bucket 3: intervals-ordering` (Timeline sweeps, interval merging, monotonicity)
+4. `Bucket 4: state-parser` (State machines, parentheses, stack evaluators)
+5. `Bucket 5: graph-traversal` (BFS/DFS, cycle detection, topological sort)
+6. `Bucket 6: dynamic-recurrence` (Overlapping subproblems, memoization, bottom-up DP)
+7. `Bucket 7: lowlevel-memory` (Bit manipulation, contiguous slice views, memory layout)
 
-```json
-{
-  "current_level": 2,
-  "weakness_heatmap": {
-    "window_contraction_boundary": { "pressure": 0.85, "exposures": 3 }
-  },
-  "session_checkpoint": {
-    "active_bucket": "stream-window",
-    "saved_step": "Step 3 Pseudocode",
-    "detour_topic": null
-  }
-}
-```
+- Starts at **Tier 1, Stage 1 (Clean-Room raw numbers)**.
+- Automatically advances tier/stage as archetypes are mastered.
 
-### The Re-Skinning Mandate:
-- High-pressure weaknesses are re-tested in future turns using completely different data representations (Integers $\rightarrow$ Strings $\rightarrow$ Physical Cards $\rightarrow$ Event Streams). The learner never feels problem repetition.
+### B. User Explicit Override
+If the learner states a preference (*"Let's practice graphs"*, *"I want to brush up on dynamic programming at Tier 3"*):
+- Coach immediately pivots to requested bucket and tier.
+- Updates `"active_bucket"` in `.agent/learner-profile.json`.
+
+### C. Weakness Pressure Engine & Profile Tracking
+- **Profile Location**: `.agent/learner-profile.json`
+- **Weakness Loop-Back**: When `weakness_heatmap` pressure for any concept exceeds `0.70`, coach procedurally injects a re-skinned problem targeting that weakness before advancing.
+- **The Re-Skinning Mandate**: High-pressure weaknesses are re-tested using completely different data representations (Integers $\rightarrow$ Strings $\rightarrow$ Physical Cards $\rightarrow$ Event Streams). The learner never feels problem repetition.
 
 ---
 
