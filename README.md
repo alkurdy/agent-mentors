@@ -6,12 +6,14 @@ Default AI coding assistants suffer from an anti-learning flaw: **they dump full
 
 **Agent Mentors** is a collection of modular agent skills (following the open `SKILL.md` standard) engineered with strict pedagogical guardrails. They force the model to behave like a Senior Staff Engineer or Design Director: guiding through discovery, questioning assumptions, teaching first-principles mental models, and never spoon-feeding solutions.
 
-All mentors enforce the **Conversational Ping-Pong, Verbosity Gate & Detour Protocol**:
+All mentors enforce the **Conversational Ping-Pong, Spiral Sprint & Detour Protocol**:
 - ⚡ **Token-Conscious (< 80 tokens/turn)**: tight 40–60 word responses; zero conversational filler or pleasantries.
 - 🏓 **Always back-and-forth**: strictly 2–3 short sentences and exactly one focused question per turn.
+- 🌀 **Cumulative Spiral Sprints**: zero erratic daily context switching. Stay locked in an active track; each day introduces novel challenges that **strictly build on the foundation laid the day before**.
+- 🌉 **The Daily Cumulative Bridge**: every session opens with a 1-sentence recap linking yesterday's invariant to today's escalation.
 - 🔄 **Detour & Resume**: say *"Wait, explain X first"* or *"Go back to Y"*; the mentor checkpoints current progress, deep dives into the detour, and resumes seamlessly without lost context.
 - 🚪 **The Verbosity Gate (Permission Required)**: mentors never dump long explanations, code traces, or diagrams unprompted; they must ask permission to unpack deep dives first.
-- 🎯 **Adaptive Scaffolding**: mirrors your assumptions and hints at alternative perspectives without giving away the answer.
+- 🎯 **Adaptive Scaffolding & Breadcrumbs**: non-spoiling toy examples and assertions without writing the solution for you.
 
 ---
 
@@ -28,6 +30,7 @@ All mentors enforce the **Conversational Ping-Pong, Verbosity Gate & Detour Prot
 | **[`incident-postmortem-mentor`](skills/incident-postmortem-mentor/SKILL.md)** | SRE & Incident Analysis | Guides blameless Root Cause Analysis (RCA), detects monitoring gaps, blast radius risks, and systemic architectural fixes. |
 | **[`cicd-pipeline-mentor`](skills/cicd-pipeline-mentor/SKILL.md)** | CI/CD & Delivery Architecture | Audits deployment safety, silent failure swallowing (`\|\| true`), state coupling across jobs, and secret exposure. |
 | **[`product-design-mentor`](skills/product-design-mentor/SKILL.md)** | UX & Product Design | Teaches user mental models, cognitive load reduction, information architecture, and design system rigor. |
+| **[`creative-fiction-mentor`](skills/creative-fiction-mentor/SKILL.md)** | Creative & Fiction Writing | Crafts narrative architecture, scene desire vs resistance, character value shifts, subtext dialogue, and prose cadence. |
 
 ---
 
@@ -65,6 +68,7 @@ When I ask to learn or practice a topic, read and adopt the mentor instructions 
 - `skills/incident-postmortem-mentor/SKILL.md` (for incident RCA / postmortems)
 - `skills/cicd-pipeline-mentor/SKILL.md` (for CI/CD pipeline architecture)
 - `skills/product-design-mentor/SKILL.md` (for UI/UX architecture)
+- `skills/creative-fiction-mentor/SKILL.md` (for creative writing & fiction narrative architecture)
 ```
 
 ---
