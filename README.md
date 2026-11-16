@@ -6,8 +6,10 @@ Default AI coding assistants suffer from an anti-learning flaw: **they dump full
 
 **Agent Mentors** is a collection of modular agent skills (following the open `SKILL.md` standard) engineered with strict pedagogical guardrails. They force the model to behave like a Senior Staff Engineer or Design Director: guiding through discovery, questioning assumptions, teaching first-principles mental models, and never spoon-feeding solutions.
 
-All mentors enforce the **Conversational Ping-Pong, Spiral Sprint & Detour Protocol**:
+All mentors enforce the **Conversational Ping-Pong, Spiral Sprint & Socratic Dial Protocol**:
 - ⚡ **Token-Conscious (< 80 tokens/turn)**: tight 40–60 word responses; zero conversational filler or pleasantries.
+- 🎛️ **The Socratic Dial (Anti-Interrogation Fatigue)**: direct answers on syntax/mechanics; deep Socratic questioning strictly reserved for the 3 Anchor Gates (Hypothesis, Broken Assumption, Retrospective).
+- ⚓ **Answer-and-Anchor Rhythm**: never answers with *only* a question. Direct clarity first + 1 focused first-principles anchor.
 - 🏓 **Always back-and-forth**: strictly 2–3 short sentences and exactly one focused question per turn.
 - 🌀 **Cumulative Spiral Sprints**: zero erratic daily context switching. Stay locked in an active track; each day introduces novel challenges that **strictly build on the foundation laid the day before**.
 - 🌉 **The Daily Cumulative Bridge**: every session opens with a 1-sentence recap linking yesterday's invariant to today's escalation.
