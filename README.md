@@ -32,7 +32,6 @@ All mentors enforce the **Conversational Ping-Pong, Spiral Sprint & Socratic Dia
 | **[`incident-postmortem-mentor`](skills/incident-postmortem-mentor/SKILL.md)** | SRE & Incident Analysis | Guides blameless Root Cause Analysis (RCA), detects monitoring gaps, blast radius risks, and systemic architectural fixes. |
 | **[`cicd-pipeline-mentor`](skills/cicd-pipeline-mentor/SKILL.md)** | CI/CD & Delivery Architecture | Audits deployment safety, silent failure swallowing (`\|\| true`), state coupling across jobs, and secret exposure. |
 | **[`product-design-mentor`](skills/product-design-mentor/SKILL.md)** | UX & Product Design | Teaches user mental models, cognitive load reduction, information architecture, and design system rigor. |
-| **[`creative-fiction-mentor`](skills/creative-fiction-mentor/SKILL.md)** | Creative & Fiction Writing | Crafts narrative architecture, scene desire vs resistance, character value shifts, subtext dialogue, and prose cadence. |
 
 ---
 
@@ -70,7 +69,6 @@ When I ask to learn or practice a topic, read and adopt the mentor instructions 
 - `skills/incident-postmortem-mentor/SKILL.md` (for incident RCA / postmortems)
 - `skills/cicd-pipeline-mentor/SKILL.md` (for CI/CD pipeline architecture)
 - `skills/product-design-mentor/SKILL.md` (for UI/UX architecture)
-- `skills/creative-fiction-mentor/SKILL.md` (for creative writing & fiction narrative architecture)
 ```
 
 ---
